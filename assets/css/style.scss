@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Roboto+Mono:wght@300&display=swap");
+@font-face {
+  font-family: "Geom";
+  src: url("../fonts/Geometos\ Rounded.ttf");
+}
+
+$hitam: rgb(10, 10, 10);
+$putih: lightgrey;
+$font1: "Geom", "Playfair Display", serif;
+$font2: "Mukta", sans-serif;
+$ora: rgb(255, 164, 44);
+$texts: 0 0 20px #dd3333;
+$red: #ef0d0c;
+
+@mixin forprojects {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(15, 15, 15, 0.116);
+  background-blend-mode: darken;
+}
+
+.container-fluid {
+  margin: 0 0 0 0;
+}
+
+body {
+  background-color: $hitam;
+  transition: 0.5s all ease-in-out;
+}
+
+body.now {
+  background-color: $putih;
+}
+
+#home {
+  background-image: url("../images/IMG_20220221_093425-01.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(15, 15, 15, 0.384);
+  background-blend-mode: darken;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+
+  .home_profile {
+    z-index: 2;
+    .home-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      h1 {
+        font-family: $font1;
+        letter-spacing: 5px;
+        color: rgb(255, 164, 44);
+        font-size: 10vh;
+        text-shadow: 0 0 9px rgb(248, 160, 44);
+        animation: nameani 2s ease-in-out infinite;
+        flex-wrap: nowrap;
+        position: relative;
+      }
+    }
+
+    h2 {
+      color: $putih;
+      font-family: "Mukta";
+      display: flex;
+      animation: typed 5s steps(20, end) forwards infinite;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .home_image {
+    position: absolute;
+    z-index: 0;
+    img {
+      object-fit: contain;
+      width: 500px;
+    }
+  }
+}
+
+#projects {
+  height: 0;
+  display: flex;
+  margin-top: 20vh;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+  border-bottom: 2px dashed $ora;
+
+  .projectss {
+    width: 90%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    .projects-items {
+      margin: 3vw;
+      transition: 0.5s all ease-in-out;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+      .projects-caption {
+        font-family: $font2;
+        .projects-caption-header {
+          text-shadow: 0 0 4px $ora;
+          color: $ora;
+          font-family: $font1;
+          display: flex;
+          justify-content: space-between;
+          a {
+            font-family: $font2;
+            color: $putih;
+          }
+        }
+        .projects-caption-body {
+          background-color: rgba(15, 15, 15, 0.596);
+          color: $putih;
+        }
+      }
+    }
+
+    .img-projects:hover {
+      box-shadow: 0 0 20px rgb(255, 164, 44);
+    }
+
+    .website {
+      background-image: url("../images/1.jpeg");
+      @include forprojects();
+    }
+    .design {
+      background-image: url("../images/1.jpeg");
+      @include forprojects();
+    }
+    .draw {
+      background-image: url("../images/3.jpeg");
+      @include forprojects();
+    }
+    .trid {
+      @include forprojects();
+      height: 100%;
+      background-image: url("../images/1.jpeg");
+    }
+
+    .img-projects {
+      width: 270px;
+      object-fit: contain;
+    }
+  }
+
+  .arts-nav {
+    position: absolute;
+    z-index: 100;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+
+    .arts-btns {
+      background-color: transparent;
+      border: none;
+      outline: 1px solid rgb(255, 164, 44);
+      color: rgb(255, 164, 44);
+      border-radius: 10px;
+      font-size: 20px;
+      box-shadow: 0 0 10px rgb(255, 164, 44);
+      background-color: rgba(15, 15, 15, 0.644);
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  .projects-nav {
+    border-left: 1px solid $ora;
+    flex: 0.1;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    right: 0;
+    height: 100%;
+    justify-content: space-around;
+
+    .pro-btn {
+      font-family: $font1;
+      transform: rotate(90deg);
+      font-size: 3vw;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: $ora;
+      border: 1px solid $ora;
+      border-radius: 50px;
+      cursor: pointer;
+      text-align: center;
+      &.active {
+        background-color: $ora;
+        color: $hitam;
+      }
+    }
+  }
+  &.reveal {
+    height: 120vh;
+    padding-bottom: 20vh;
+  }
+}
+
+.abouts {
+  margin-top: 400px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+  background-image: url("../images/pexels-bnw-9488124.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(15, 15, 15, 0.836);
+  background-blend-mode: hard-light;
+
+  transition: 0.5s all ease-in-out;
+
+  h2 {
+    width: fit-content;
+    height: fit-content;
+    -webkit-text-stroke: 1px rgb(255, 164, 44);
+    -webkit-text-fill-color: transparent;
+    font-family: $font1;
+    word-break: break-all;
+    // font-size: 8vw;
+    font-size: 70px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(20deg);
+    flex: 0.1;
+    animation: text-flicker 3s linear infinite;
+  }
+  p {
+    flex: 0.8;
+    color: $putih;
+    font-family: $font2;
+    font-size: 20px;
+    text-shadow: 0 0 3px $red;
+  }
+}
+
+.abouts.now {
+  box-shadow: 0 -20px 120px 200px #ef0c0cea;
+}
+
+#contactme {
+  margin-top: 100px;
+  h1 {
+    color: $hitam;
+    font-weight: bold;
+  }
+  font-family: $font2;
+  .contactme-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .forms {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    color: rgba(211, 211, 211, 0.719);
+    margin: 2vh 0;
+  }
+
+  .emailin {
+    background-color: transparent;
+    border: none;
+    outline: 1px solid rgb(248, 160, 44);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    color: $putih;
+    box-shadow: 0 0 10px rgb(255, 164, 44);
+  }
+  textarea {
+    background-color: transparent;
+    box-shadow: 0 0 10px rgb(255, 164, 44);
+    border: none;
+    padding: 20px;
+    border: 1px solid rgb(255, 164, 44);
+    border-radius: 50px;
+    color: $putih;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  .form-reveal {
+    opacity: 0;
+    width: 0;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .form-reveal.now {
+    opacity: 1;
+    width: 100%;
+  }
+
+  .btn {
+    background-color: rgb(255, 164, 44);
+    font-family: $font1;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 3vh;
+    box-shadow: 0 0 5px rgb(253, 175, 73);
+    text-align: right;
+  }
+}
+
+footer {
+  font-family: $font1;
+  color: $putih;
+  text-align: center;
+  margin-top: 50vh;
+  margin-bottom: 150vh;
+}
+
+#nemodyblog {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font2;
+  background-color: white;
+  transition: 0.4s all ease-in-out;
+
+  &.hovers {
+    background-image: url("../images/nemody.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nemodybtn {
+    text-decoration: none;
+    font-size: 10vh;
+    color: $putih;
+    padding: 10px;
+    color: $hitam;
+    outline: 2px solid $hitam;
+    transition: 0.3s ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes nameani {
+  0% {
+    text-shadow: 0 0 9px rgb(248, 160, 44);
+  }
+  99% {
+    text-shadow: none;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+    text-shadow: $texts;
+  }
+
+  2% {
+    opacity: 1;
+    text-shadow: $texts;
+  }
+  8% {
+    opacity: 0.1;
+    text-shadow: $texts;
+  }
+  9% {
+    opacity: 1;
+    text-shadow: $texts;
+  }
+  12% {
+    opacity: 0.1;
+    text-shadow: $texts;
+  }
+  20% {
+    opacity: 1;
+    text-shadow: $texts;
+  }
+  25% {
+    opacity: 0.3;
+    text-shadow: $texts;
+  }
+  30% {
+    opacity: 1;
+    text-shadow: $texts;
+  }
+
+  70% {
+    opacity: 0.7;
+    text-shadow: $texts;
+  }
+
+  72% {
+    opacity: 0.2;
+    text-shadow: $texts;
+  }
+
+  77% {
+    opacity: 0.9;
+    text-shadow: $texts;
+  }
+  100% {
+    opacity: 0.9;
+    text-shadow: $texts;
+  }
+}
+
+@keyframes typed {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes trans-projects {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
