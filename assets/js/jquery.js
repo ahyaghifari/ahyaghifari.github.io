@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    $(window).on("load", function () {
-        $('.load-wrapper').addClass('ended');
-    })
+//     $(window).on("load", function () {
+//         $('.load-wrapper').addClass('ended');
+//     })
 
       // IMAGE CAN'T DOWNLOAD
             $('img').bind('contextmenu', function (e) {
