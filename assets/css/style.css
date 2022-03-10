@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Mukta:wght@300&family=Prompt:wght@300&family=Roboto+Slab&family=Yeseva+One&display=swap");
+@font-face {
+  font-family: "Geom";
+  src: url("../fonts/Geometos Rounded.ttf");
+}
+
+@font-face {
+  font-family: "Carneys";
+  src: url("../fonts/Carneys Gallery.otf");
+}
+
+@font-face {
+  font-family: "goodtimingbd";
+  src: url("../fonts/good timing bd.ttf");
+}
+
+.themes-buttons {
+  height: 30px;
+  width: 150px;
+  position: absolute;
+  z-index: 200;
+  top: 20px;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.themes-buttons .thmsbtn {
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #0a0a0a;
+          box-shadow: 0 0 10px #0a0a0a;
+}
+
+.themes-buttons .btn-default {
+  background: #833e25;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #833e25), color-stop(72%, #ffa42c));
+  background: linear-gradient(0deg, #833e25 19%, #ffa42c 72%);
+}
+
+.themes-buttons .btn-darkblue {
+  background: #0d0055;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #0b003a), color-stop(72%, #1200af));
+  background: linear-gradient(0deg, #0b003a 19%, #1200af 72%);
+}
+
+.themes-buttons .btn-retro {
+  background: #e6d1ab;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #665541), color-stop(72%, #e6d1ab));
+  background: linear-gradient(0deg, #665541 19%, #e6d1ab 72%);
+}
+/*# sourceMappingURL=style.css.map */
