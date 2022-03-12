@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Mukta:wght@300&family=Prompt:wght@300&family=Roboto+Slab&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Mukta:wght@300&family=Prompt:wght@300&family=Roboto+Slab&family=Yeseva+One&display=swap");
+@font-face {
+  font-family: "Geom";
+  src: url("../fonts/Geometos Rounded.ttf");
+}
+
+@font-face {
+  font-family: "Carneys";
+  src: url("../fonts/Carneys Gallery.otf");
+}
+
+@font-face {
+  font-family: "Geom";
+  src: url("../fonts/Geometos Rounded.ttf");
+}
+
+@font-face {
+  font-family: "Carneys";
+  src: url("../fonts/Carneys Gallery.otf");
+}
+
+.themes-buttons {
+  height: 30px;
+  width: 150px;
+  position: absolute;
+  z-index: 200;
+  top: 20px;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.themes-buttons .thmsbtn {
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #0a0a0a;
+          box-shadow: 0 0 10px #0a0a0a;
+}
+
+.themes-buttons .btn-default {
+  background: #833e25;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #833e25), color-stop(72%, #ffa42c));
+  background: linear-gradient(0deg, #833e25 19%, #ffa42c 72%);
+}
+
+.themes-buttons .btn-standard {
+  background-color: white;
+}
+
+.themes-buttons .btn-retro {
+  background: #e6d1ab;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #665541), color-stop(72%, #e6d1ab));
+  background: linear-gradient(0deg, #665541 19%, #e6d1ab 72%);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Roboto Slab", serif;
+}
+
+.glass {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #ffe8be2f;
+  z-index: 500;
+  background-image: url("../images/dust.jpg");
+  background-blend-mode: screen;
+  background-size: cover;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+body {
+  background-image: url("../images/paper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #d8b370;
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+}
+
+#home {
+  position: relative;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home .home-profile {
+  z-index: 1;
+}
+
+#home .home-profile h1 {
+  font-family: "Carneys", cursive;
+  color: #493d30;
+  font-size: 14.5vh;
+  width: 50%;
+  text-shadow: -5px 7px 2px #0000005e;
+  -webkit-text-stroke: 2px #d8b370;
+}
+
+#home .home-profile h2 {
+  color: #665541;
+  background-color: #d8b370;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#home .home-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: super;
+  text-align: right;
+  width: 100%;
+}
+
+#home .home-image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  text-align: center;
+  height: 70vh;
+  border: 2px dashed #493d30;
+  -webkit-box-shadow: 20px 15px 2px #493d30a4;
+          box-shadow: 20px 15px 2px #493d30a4;
+  -webkit-filter: sepia(40%);
+          filter: sepia(40%);
+}
+
+#projects {
+  margin-top: 30vh;
+}
+
+#projects .projects-container {
+  height: 40vh;
+  background-color: #493d30;
+  margin: 10vh 0;
+  -webkit-box-shadow: 0 5px 4px rgba(10, 10, 10, 0.267);
+          box-shadow: 0 5px 4px rgba(10, 10, 10, 0.267);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+#projects .cont2 {
+  background-color: #665541;
+}
+
+#projects .owl-carousel .owl-stage {
+  height: 40vh;
+  padding-top: 20px;
+}
+
+#projects .item {
+  margin: 0 4vw;
+}
+
+#projects .item img {
+  height: 30vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-box-shadow: 0 0 5px #0a0a0a;
+          box-shadow: 0 0 5px #0a0a0a;
+  -webkit-filter: sepia(80%);
+          filter: sepia(80%);
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+#projects .item img:hover {
+  -webkit-filter: sepia(0);
+          filter: sepia(0);
+}
+
+#projects .item .img-capt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects .item .img-capt h2 {
+  font-family: "Carneys", cursive;
+  color: #d8b370;
+  text-shadow: 0 2 2px #0a0a0a;
+}
+
+#projects .item .img-capt a {
+  color: lightgrey;
+}
+
+#projects .title-projects {
+  font-size: 15vh;
+  font-family: "Carneys", cursive;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  width: 100%;
+  background: url("../images/paper.jpg");
+  background-size: cover;
+  background-clip: content-box;
+}
+
+#projects .projects-container:hover {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px) rotateX(10deg) scale(1.1);
+          transform: perspective(1000px) rotateX(10deg) scale(1.1);
+}
+
+#about {
+  margin-top: 40vh;
+}
+
+#about h2 {
+  color: #d8b370;
+  font-family: "Carneys", cursive;
+  font-size: 20vw;
+  text-align: center;
+  -webkit-text-stroke: 3px #493d30;
+  text-shadow: 4px 2px 2px rgba(10, 10, 10, 0.603);
+}
+
+#about p {
+  color: #493d30;
+  text-align: center;
+  font-size: 4vw;
+  -webkit-transform: perspective(1000px) rotateX(2deg);
+          transform: perspective(1000px) rotateX(2deg);
+}
+
+footer {
+  margin-top: 40vh;
+  text-align: center;
+  color: #493d30;
+  font-family: "Carneys", cursive;
+}
+
+footer h5 {
+  font-family: "Carneys", cursive;
+}
+/*# sourceMappingURL=retro.css.map */
