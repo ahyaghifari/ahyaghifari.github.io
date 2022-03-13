@@ -12,7 +12,7 @@
                     "gambar": "website2.png",
                     "nama": "Nothvain",
                     "linkshow": "nothain00.ga",
-                    "link": "nothvain.ga"
+                    "link": "http://nothvain00.ga/"
                 },
                 {
                     "gambar": "website3.png",
@@ -24,13 +24,13 @@
                     "gambar": "website4.png",
                     "nama": "NemodyBlog",
                     "linkshow": "nemodyblog.app",
-                    "link": ""
+                    "link": "https://nemody-blog-2424e.web.app/"
                 },
                 {
                      "gambar": "website5.png",
                     "nama": "Matchasss",
                     "linkshow": "matchasss",
-                    "link": ""
+                    "link": "https://ahyaghifari.github.io/matchasss/"
                 }
         ]
         },
