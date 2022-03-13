@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Nanum+Gothic&family=Yeseva+One&display=swap");
+@font-face {
+  font-family: "Carneys";
+  src: url("../fonts/Carneys\ Gallery.otf");
+}
+
+$font1: "Carneys", "Yeseva One", serif;
+$font2: "Nanum Gothic", sans-serif;
+$oldbrick: #8c2318;
+$crm: #e6d1ab;
+$blue: #5e8c6a;
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.glass {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #ffe8be2f;
+  z-index: 500;
+  background-image: url("../images/dust.jpg");
+  background-blend-mode: screen;
+  background-size: cover;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+#home {
+  display: flex;
+  height: 70vh;
+  padding: 40px;
+  background-color: $oldbrick;
+  background-image: url("../images/paper.jpg");
+  background-blend-mode: multiply;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.37);
+  overflow: hidden;
+  .home-profile {
+    z-index: 1;
+    width: 50%;
+    h1 {
+      font-size: 14vh;
+      font-family: $font1;
+      color: $crm;
+      text-shadow: -4px 5px 2px rgba(0, 0, 0, 0.39);
+      -webkit-text-stroke: 0.05px $oldbrick;
+    }
+    h2 {
+      font-family: $font2;
+      background-color: $blue;
+      margin: 1vh 0;
+      width: fit-content;
+      padding: 5px;
+      color: $crm;
+      box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.37);
+    }
+  }
+  .home-image {
+    height: 70vh;
+    text-align: right;
+    display: flex;
+    width: 90%;
+    img {
+      transform: perspective(1000px) rotateY(-4deg) rotateX(5deg);
+      object-fit: contain;
+      height: 70vh;
+      width: 400px;
+      border: 2px dashed $crm;
+      box-shadow: 6px 5px 3px rgba(0, 0, 0, 0.37);
+      background: rgb(231, 231, 231);
+      background: linear-gradient(
+        117deg,
+        rgba(231, 231, 231, 0.2) 16%,
+        rgba(255, 255, 255, 0.1) 21%,
+        rgba(203, 203, 203, 0.2) 37%,
+        rgba(179, 179, 179, 0.2) 52%,
+        rgba(255, 250, 250, 0.1) 68%,
+        rgba(214, 211, 211, 0.1) 88%,
+        rgba(167, 167, 167, 0.2) 100%
+      );
+      filter: sepia(30%);
+      backdrop-filter: blur(1px);
+    }
+  }
+}
+
+#projects {
+  height: 100vh;
+  background-color: $crm;
+  background-image: url("../images/paper.jpg");
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  h2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font1;
+    font-size: 7vw;
+    color: $oldbrick;
+    pointer-events: none;
+  }
+
+  .projects-container {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .web-capt {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    h4 {
+      font-family: $font1;
+      color: $oldbrick;
+    }
+    a {
+      color: $crm;
+      padding: 5px;
+      font-family: $font2;
+      font-weight: bold;
+      background-color: #8c2318;
+    }
+  }
+
+  .projects-content {
+    cursor: pointer;
+    margin: 1vh 2vw;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
+    width: 95.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 80vh;
+    overflow-y: scroll;
+    background: rgb(231, 231, 231);
+    background: linear-gradient(
+      117deg,
+      rgba(231, 231, 231, 0.2) 16%,
+      rgba(255, 255, 255, 0.1) 21%,
+      rgba(203, 203, 203, 0.2) 37%,
+      rgba(179, 179, 179, 0.2) 52%,
+      rgba(255, 250, 250, 0.1) 68%,
+      rgba(214, 211, 211, 0.1) 88%,
+      rgba(167, 167, 167, 0.2) 100%
+    );
+    .items {
+      margin: 2vh 0;
+      img {
+        width: 350px;
+        object-fit: contain;
+        filter: sepia(80%);
+        transition: 0.4s all ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.1);
+        filter: sepia(0);
+      }
+    }
+  }
+}
+
+#about {
+  display: flex;
+  height: 80vh;
+  background-color: $oldbrick;
+  background-image: url("../images/noise.jpg");
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  .about-image {
+    flex: 0.1;
+    img {
+      height: 100vh;
+      width: 200px;
+      object-fit: cover;
+      filter: sepia(50%);
+    }
+  }
+  .about-body {
+    flex: 0.9;
+    padding: 10px;
+    overflow-y: scroll;
+
+    h2 {
+      font-size: 9vw;
+      font-family: $font1;
+      color: $blue;
+    }
+    h3 {
+      font-family: $font1;
+      font-size: 26px;
+      color: $crm;
+      margin: 3vh 0;
+      text-decoration: underline;
+    }
+    p {
+      color: $crm;
+      font-family: $font2;
+      font-size: 16px;
+    }
+  }
+  .about-website-component {
+    display: flex;
+    background-color: #e6d1ab;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    h4 {
+      margin: 2vh 0 1vh 0;
+      font-family: $font2;
+    }
+    ul {
+      font-family: $font1;
+      padding: 5px;
+      color: $oldbrick;
+    }
+    .colors-content {
+      display: flex;
+    }
+    .colorss {
+      width: 50px;
+      height: 50px;
+      background-color: #8c2318;
+    }
+    .a1 {
+      background-color: #5e8c6a;
+    }
+    .a2 {
+      background-color: $crm;
+      outline: 0.05px solid $oldbrick;
+    }
+  }
+}
+
+#contactme {
+  background-color: $blue;
+  text-align: center;
+  border-top: 4px dashed $oldbrick;
+  h2 {
+    color: $crm;
+    font-size: 5vw;
+    text-decoration: underline;
+  }
+
+  .contactme-form {
+    .forms {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+
+      label {
+        color: $oldbrick;
+        font-family: $font1;
+        font-size: 3vw;
+        margin: 3vh 0;
+      }
+
+      .emailin {
+        padding: 10px;
+        margin: 0 30%;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $oldbrick;
+        border: 1px solid $crm;
+        border-radius: 20px;
+        font-size: 3vw;
+      }
+      textarea {
+        outline: none;
+        margin: 0 15%;
+        background-color: transparent;
+        border: 1px solid $crm;
+        border-radius: 20px;
+        font-size: 2vw;
+        padding: 10px;
+        color: $crm;
+        resize: vertical;
+      }
+    }
+    button {
+      background-color: $oldbrick;
+      padding: 10px;
+      color: $crm;
+      font-family: $font1;
+      border: none;
+      margin: 3vh 0;
+      font-size: 2.5vw;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.37);
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  background-color: $crm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  h2 {
+    font-family: $font1;
+    color: $oldbrick;
+  }
+}
