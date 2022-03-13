@@ -43,7 +43,7 @@ $(document).ready(function () {
         // WEBSITE
         $.each(web, function (i, data) { 
             $.each(data, function (i, data){
-                let listweb = '<div class="items"><img src="./assets/images/projects/'+data.gambar+'" class="img-projects" alt=""><div class="web-capt"><h4>'+data.nama+'</h4><a href="'+data.link+'">'+data.linkshow+'</a></div></div>';
+                let listweb = '<div class="items"><img src="./assets/images/projects/'+data.gambar+'" class="img-projects" alt=""><div class="web-capt"><h4>'+data.nama+'</h4><a href="'+data.link+'" target="_blank">'+data.linkshow+'</a></div></div>';
                 $('.website').append(listweb);
             });
         });
