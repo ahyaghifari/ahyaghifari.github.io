@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     // IMAGES
-    // $('#projects').on('contextmenu', 'img', function (e) {
-    //     return false;
-    // });
+     $('#projects').on('contextmenu', 'img', function (e) {
+         return false;
+     });
 
     // PROJECTS NAV
     $('.projects-nav').click(function () {
