@@ -324,11 +324,10 @@ body {
 }
 
 #projects #projects-body #trid #trid-title {
-  color: #070707;
+  color: white;
   font-family: "Bebas Neue", sans-serif;
   text-align: right;
   font-size: 12vh;
-  -webkit-text-stroke: 0.1px #4b4b4b;
 }
 
 #projects #projects-body #trid #trid-cont {
