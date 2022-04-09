@@ -50,9 +50,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 1px;
   word-break: keep-all;
-  background: -webkit-linear-gradient(26deg, #ffffff 0%, #d5d5d5 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
   font-size: 15vh;
   -webkit-transform: scaleX(max-content);
           transform: scaleX(max-content);
