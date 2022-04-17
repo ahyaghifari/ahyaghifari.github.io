@@ -179,8 +179,8 @@ body {
 }
 
 #projects #projects-body .projects-items:hover .projects-images {
-  -webkit-filter: grayscale(0.6) brightness(85%);
-          filter: grayscale(0.6) brightness(85%);
+  -webkit-filter: grayscale(0) brightness(85%);
+          filter: grayscale(0) brightness(85%);
 }
 
 #projects #projects-body .projects-images {
