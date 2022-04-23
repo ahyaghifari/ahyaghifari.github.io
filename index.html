@@ -5,53 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AhyaGhifari</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300;400;600;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        myblack: '#070707',
+                        mygray: '#4b4b4b',
+                        maroon: '#BF0202'
+                    },
+                    fontFamily: {
+                        'bebas': ['Bebas Neue', 'cursive'],
+                        'raleway': ['Raleway', 'sans-serif'],
+                    },
+                     aspectRatio: {
+                        '4/3': '4 / 3',
+                        '3/4': '3 / 4',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        #me{
+            background-image: url('./assets/images/me.jpg');
+            background-color: rgba(0, 0, 0, 0.644);
+            background-blend-mode: darken;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #website-title{
+            background-image: url('./assets/images/1-2.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin: border-box;
+            background-attachment: fixed;
+        }
+        #about{
+            background-image: url('./assets/images/1-3.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin: border-box;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-myblack">
 
+    <main>
 
-        <main>
-
-
-            <div id="me">
-                <div id="me-profile">
-                    <h1>Ahya Ghifari</h1>
-                    <h2 class="age">18th, Student</h2>
-                    <h2>Banjarbaru, Indonesia</h2>
-                </div>
+            <div id="me" class="h-screen font-raleway flex flex-col justify-center p-3 ">
+                    <h1 class="font-bebas text-maroon text-8xl md:text-9xl">Ahya Ghifari</h1>
+                    <h2 class="text-white text-xl w-5/12 md:text-3xl">18th, Student</h2>
+                    <h2 class="text-white text-xl md:text-3xl">Banjarbaru, Indonesia</h2>
             </div>
 
 
-            <div id="projects">
-                <div id="projects-header">
-                    <h1>What I Do <br> So Far This Years...</h1>
-                </div>
-                <div id="projects-nav">
-                    <a href ="#website" class="projects-nav active">Website</a>
-                    <a href="#design" class="projects-nav">Design</a>
-                    <a href="#trid" class="projects-nav">3D</a>
-                </div>
-                <div id="projects-body">
-                    <div class="projects-comps" id="website">
-                        <h1 id="website-title">Website</h1>
-                        <div id="website-cont"></div>
+             <div id="projects" class="mt-24">
+                <h1 class="text-5xl font-bebas font-black text-mygray p-2 md:text-6xl lg:text-8xl">What I Do <br> So Far This Years...</h1>
+                <div id="projects-body" class="mt-40">
+                    
+                    <div id="website" class=" md:grid md:grid-cols-3 border-b-2 border-maroon border-dashed">
+                        <h1 id="website-title" class="text-maroon font-raleway font-semibold h-40 text-3xl flex justify-center items-center sm:text-4xl md:row-span-2 md:h-96 md:h-full md:text-6xl md:font-black">Website</h1>
+                        <div id="website-cont" class="flex flex-wrap justify-evenly p-1 md:overflow-x-hidden md:overflow-y-scroll h-full row-span-2 col-span-2 md:max-h-screen "></div>
                     </div>
-                    <div class="projects-comps" id="design">
-                        <h1>Design</h1>
-                        <div id="design-cont"></div>
+
+                   <div id="design"  class="bg-mygray p-3 mt-44">
+                        <h1 class="font-raleway font-semibold text-3xl">Design</h1>
+                        <div id="design-cont" class="flex flex-wrap justify-around lg:justify-evenly"></div>
                     </div>
-                    <div class="projects-comps" id="trid">
-                        <h1 id="trid-title">3D</h1>
-                        <div id="trid-cont"></div>
+                    
+                    <div id="trid" class="mt-32 p-1">
+                        <h1 class="text-maroon text-5xl font-bebas text-right mr-2 mb-4">3D</h1>
+                        <div id="trid-cont" class="flex flex-wrap justify-center"></div>
                     </div>
                 </div>
             </div>
-
-            <div id="about">
-                <h1>ABOUT</h1>
-                <p class="about-body">Hi,<br><br>
+            
+            <div id="about" class="p-2 mt-24 lg:h-screen">
+                <h1 class="text-center mt-14 text-maroon font-raleway font-black text-3xl sm:text-4xl md:text-5xl">ABOUT</h1>
+                <p class="about-body text-mygray font-raleway font-sm sm:text-base md:text-md lg:text-2xl lg:mt-10 md:text-center">Hi,<br><br>
                     My name is Ahya Ghifari, just call Ahya. I' m nobody, i just a reguler
                     human like. Eat rice, take a bath, and sleep. <br> My hobby is nothing, mix. If i want something i just
                     do it.
@@ -62,19 +103,20 @@
                     <br><br>See you.
                 </p>
             </div>
-
-            <div id="btw">
-            <marquee behavior="" direction="left" scrollamount="3">By The Way, Why are you here? "Friend? OldFriend?" Or Just Stalker</marquee>
+            
+            <div id="btw" class="mt-2">
+            <marquee behavior="" direction="left" scrollamount="3" class="text-maroon font-bebas text-2xl sm:text-3xl md:text-4xl lg:text-5xl">By The Way, Why are you here? "Friend? OldFriend?" Or Just Stalker</marquee>
             </div>
             
-            <div id="contactme">
-                <h1>You Want To Contact Me? Just <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ahyaghifari288@gmail.com&body=Hi Ahya, I Want To...">EMAIL</a> Me. Now.</h1>
+
+            <div id="contactme" class="h-screen flex items-center p-2">
+                <h1 class="text-5xl text-bebas text-mygray font-raleway font-semibold sm:text-6xl md:text-7xl lg:text-8xl">You Want To Contact Me? Just <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ahyaghifari288@gmail.com&body=Hi Ahya, I Want To..." class="text-maroon font-bebas">EMAIL</a> Me. Now.</h1>
             </div>
         </main>
 
     
-        <footer>
-            <p>@ahyaghifari<span id="year"></span></p> <span id="line">|</span> <a href="https://github.com/ahyaghifari/ahyaghifari.github.io"><img src="./assets/images/GitHub-Mark-32px.png" alt=""></a>
+        <footer class="flex p-2 justify-center mt-7 items-center">
+            <p class="text-white font-raleway">@ahyaghifari<span id="year"></span></p>| <a href="https://github.com/ahyaghifari/ahyaghifari.github.io" class="bg-white rounded-full"><img src="./assets/images/GitHub-Mark-32px.png" alt=""></a>
         </footer>
 
     
@@ -83,7 +125,7 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/script.js"></script>
            
 </body>
 </html>
