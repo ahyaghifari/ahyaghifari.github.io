@@ -1,0 +1,46 @@
+::-webkit-scrollbar{
+    width: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#name {
+  text-shadow: 0 2px 3px #00000065;
+}
+
+#me-image {
+  animation: meimageanimation 1s infinite;
+}
+
+#design-cont > img {
+  backdrop-filter: grayscale(0.5);
+  transform: rotateZ(45deg) perspective(1000px);
+}
+#design-cont >img:hover{
+    transform: rotateZ(0);
+    z-index: 50;
+}
+
+#three-cont {
+  canvas {
+    width: 50%;
+  }
+}
+
+@keyframes blinkname {
+  50% {
+    text-shadow: 0 0 0;
+  }
+}
+
+@keyframes meimageanimation {
+  49%{
+      filter: brightness(1);
+  }
+  50%{
+    filter: brightness(0.5);
+  }
+
+}
