@@ -1,0 +1,102 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#name {
+  -webkit-animation: blinkname 1s infinite linear;
+          animation: blinkname 1s infinite linear;
+  text-shadow: 0 0 10px #db0000;
+}
+
+#me-image {
+  -webkit-animation: meimageanimation 1s infinite;
+          animation: meimageanimation 1s infinite;
+}
+
+#design-cont > img {
+  -webkit-backdrop-filter: grayscale(0.5);
+          backdrop-filter: grayscale(0.5);
+  -webkit-transform: rotateZ(45deg) perspective(1000px);
+          transform: rotateZ(45deg) perspective(1000px);
+}
+
+#design-cont > img:hover {
+  -webkit-transform: rotateZ(0);
+          transform: rotateZ(0);
+  z-index: 50;
+}
+
+#three-cont canvas {
+  width: 50%;
+}
+
+@-webkit-keyframes blinkname {
+  50% {
+    text-shadow: 0 0 0;
+  }
+}
+
+@keyframes blinkname {
+  50% {
+    text-shadow: 0 0 0;
+  }
+}
+
+@-webkit-keyframes meimageanimation {
+  33% {
+    -webkit-filter: none;
+            filter: none;
+  }
+  34% {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  66% {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  67% {
+    -webkit-filter: grayscale(0) invert(1) opacity(0.5);
+            filter: grayscale(0) invert(1) opacity(0.5);
+  }
+  99% {
+    -webkit-filter: invert(1) opacity(0.5);
+            filter: invert(1) opacity(0.5);
+  }
+  100% {
+    -webkit-filter: invert(0) opacity(1);
+            filter: invert(0) opacity(1);
+  }
+}
+
+@keyframes meimageanimation {
+  33% {
+    -webkit-filter: none;
+            filter: none;
+  }
+  34% {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  66% {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  67% {
+    -webkit-filter: grayscale(0) invert(1) opacity(0.5);
+            filter: grayscale(0) invert(1) opacity(0.5);
+  }
+  99% {
+    -webkit-filter: invert(1) opacity(0.5);
+            filter: invert(1) opacity(0.5);
+  }
+  100% {
+    -webkit-filter: invert(0) opacity(1);
+            filter: invert(0) opacity(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
