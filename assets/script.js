@@ -28,7 +28,7 @@ $(document).ready(function () {
                 $('#website-cont').append(forwebsite(data.gambar, data.link, data.linkshow));
             });
             $.each(design, function (i, data) { 
-                $('#design-cont').append('<img src="'+ data.gambar +'" class="w-40 object-cover m-3 shadow-sm grayscale hover:grayscale-0 duration-500 shadow-maroon sm:w-52 md:w-64 lg:w-72">');
+                $('#design-cont').append('<img src="'+ data.gambar +'" class="w-32 object-contain aspect-square m-3 shadow-sm grayscale hover:grayscale-0 duration-500 shadow-maroon sm:w-52 md:w-64 lg:w-72">');
             });
     });
 
